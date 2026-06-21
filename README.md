@@ -1,4 +1,4 @@
-# 内容蒸馏 · bzt77-content-distiller
+# 内容蒸馏 · baozangtuan77-content-distiller
 
 > 把外部内容（课程 / 播客 / 博主系列 / 视频 / 长文）蒸馏成一份结构化笔记——**并映射到你自己的知识库和真实业务**。
 >
@@ -26,7 +26,7 @@
 
 ```bash
 # 1. 把 skill 放进你的 skills 目录
-git clone https://github.com/bzt77/bzt77-content-distiller.git
+git clone https://github.com/baozangtuan77/baozangtuan77-content-distiller.git
 # 复制到 ~/.claude/skills/ 或 ~/.agents/skills/（按你的环境）
 
 # 2. 配置你的业务（核心步骤）
@@ -89,6 +89,6 @@ cp config.example.yaml config.yaml
 
 ## License
 
-MIT © 宝藏团七七（[bzt77](https://github.com/bzt77)）
+MIT © 宝藏团七七（[baozangtuan77](https://github.com/baozangtuan77)）
 
 蒸馏引擎的"提取不诠释 / 置信度标注 / 可蒸馏度评分"思路参考了开源社区的 distiller 类项目；本工具的差异化在 config 驱动的交叉对比 + 业务映射两层。

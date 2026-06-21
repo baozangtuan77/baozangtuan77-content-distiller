@@ -74,4 +74,4 @@
 
 ---
 
-*content-distiller 是一个开源 skill。引擎公开，业务私有。 MIT License · 宝藏团七七（[bzt77](https://github.com/bzt77)）*
+*content-distiller 是一个开源 skill。引擎公开，业务私有。 MIT License · 宝藏团七七（[baozangtuan77](https://github.com/baozangtuan77)）*
