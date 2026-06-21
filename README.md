@@ -25,21 +25,34 @@
 ## 快速开始
 
 ```bash
-# 1. 把 skill 放进你的 skills 目录
+# 1. 拉下来，跑安装器（自动适配你的 agent）
 git clone https://github.com/baozangtuan77/baozangtuan77-content-distiller.git
-# 复制到 ~/.claude/skills/ 或 ~/.agents/skills/（按你的环境）
+cd baozangtuan77-content-distiller
+bash install.sh        # 按提示选 Claude Code / Codex / Cursor / Cline / Gemini / Copilot
 
 # 2. 配置你的业务（核心步骤）
 cp config.example.yaml config.yaml
 # 编辑 config.yaml，填你自己的知识库目录和业务维度
 # config.yaml 已被 .gitignore，不会上传
 
-# 3. 用
+# 3. 用（Claude Code 为例）
 /content-distiller https://youtu.be/xxxx
 /content-distiller "我刚听的这条 2 小时行业分享录音"
 ```
 
 字段怎么填见 [`config.schema.md`](./config.schema.md)。
+
+## 支持哪些 agent
+
+`SKILL.md` 是唯一真源，各 agent 用一行"指针"指向它，不复制正文。
+
+| Agent | 安装 | 触发 |
+|---|---|---|
+| **Claude Code** | 原生，丢进 `~/.claude/skills/` | `/content-distiller` |
+| **Codex** / **Cursor** / **Cline** / **Gemini CLI** / **Copilot** | 复制进项目 + 一行指针（`install.sh` 自动搞定） | 让它"蒸馏这个内容"即可 |
+| 其他能读本地文件的 agent | 指令文件指向 `SKILL.md` | 同上 |
+
+完整每个 agent 的手动步骤见 [`INSTALL.md`](./INSTALL.md)。
 
 ---
 
