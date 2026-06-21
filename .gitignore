@@ -1,0 +1,10 @@
+# 你的真实配置（含私有业务信息）——永不上传
+config.yaml
+config.yml
+
+# 你的真实蒸馏产出（如果放在 repo 内）
+/notes-private/
+
+# 系统文件
+.DS_Store
+*.log
