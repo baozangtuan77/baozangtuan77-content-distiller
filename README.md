@@ -25,12 +25,10 @@
 ## 快速开始
 
 ```bash
-# 1. 拉下来，跑安装器（自动适配你的 agent）
-git clone https://github.com/baozangtuan77/baozangtuan77-content-distiller.git
-cd baozangtuan77-content-distiller
-bash install.sh        # 按提示选 Claude Code / Codex / Cursor / Cline / Gemini / Copilot
+# 1. 一行装好（借助 skills CLI，支持 70+ 个 agent，自动适配）
+npx skills add baozangtuan77/baozangtuan77-content-distiller
 
-# 2. 配置你的业务（核心步骤）
+# 2. 配置你的业务（核心步骤）—— 进 skill 目录
 cp config.example.yaml config.yaml
 # 编辑 config.yaml，填你自己的知识库目录和业务维度
 # config.yaml 已被 .gitignore，不会上传
@@ -40,19 +38,25 @@ cp config.example.yaml config.yaml
 /content-distiller "我刚听的这条 2 小时行业分享录音"
 ```
 
+> `npx skills add` 借助 [`skills` CLI](https://github.com/vercel-labs/skills) 自动装进你 agent 的 skills 目录（默认项目级，全局加 `-g`）。**它只装 SKILL.md，不会替你跑第 2 步的 `cp config.yaml`——记得手动做一次。**
+>
+> 想手动 clone + 跑 `install.sh`（旧方式，会顺手做 config 这步），见 [`INSTALL.md`](./INSTALL.md)。
+
 字段怎么填见 [`config.schema.md`](./config.schema.md)。
 
 ## 支持哪些 agent
 
 `SKILL.md` 是唯一真源，各 agent 用一行"指针"指向它，不复制正文。
 
-| Agent | 安装 | 触发 |
-|---|---|---|
-| **Claude Code** | 原生，丢进 `~/.claude/skills/` | `/content-distiller` |
-| **Codex** / **Cursor** / **Cline** / **Gemini CLI** / **Copilot** | 复制进项目 + 一行指针（`install.sh` 自动搞定） | 让它"蒸馏这个内容"即可 |
-| 其他能读本地文件的 agent | 指令文件指向 `SKILL.md` | 同上 |
+最省事的是上面的 `npx skills add` 一行命令——它支持 70+ 个 agent（Claude Code / Codex / Cursor / Cline / Gemini / Copilot / Windsurf 等），自动适配各家目录。
 
-完整每个 agent 的手动步骤见 [`INSTALL.md`](./INSTALL.md)。
+| Agent | 触发 |
+|---|---|
+| **Claude Code** | `/content-distiller` |
+| **Codex** / **Cursor** / **Cline** / **Gemini CLI** / **Copilot** | 让它"蒸馏这个内容"即可 |
+| 其他能读本地文件的 agent | 同上 |
+
+`SKILL.md` 是唯一真源。想手动安装（clone + 一行指针）或用 `install.sh`，完整步骤见 [`INSTALL.md`](./INSTALL.md)。
 
 ---
 

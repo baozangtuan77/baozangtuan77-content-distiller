@@ -1,14 +1,24 @@
 # 安装指南（支持多种 agent）
 
-**先说实话**：目前没有一个"通用格式"能在所有 agent 一键安装——Claude 用 `SKILL.md`、Codex 用 `AGENTS.md`、Cursor 用 `.mdc`……各家规矩不同。
+这个 skill 的本质是**一份 markdown 指令（`SKILL.md`）+ 一个配置文件**。`SKILL.md` 是唯一真源，各 agent 用一行"指针"指向它——不复制正文，避免日后各处漂移。
 
-但这个 skill 的本质是**一份 markdown 指令（`SKILL.md`）+ 一个配置文件**。所以可移植的做法是：**`SKILL.md` 是唯一真源，每个 agent 用一行"指针"指向它**——不复制正文，避免日后各处漂移。
-
-下面两种方式任选。
+下面三种方式任选,**推荐方式零**。
 
 ---
 
-## 方式一：一键脚本（推荐）
+## 方式零：一行命令（最快，推荐）
+
+```bash
+npx skills add baozangtuan77/baozangtuan77-content-distiller
+```
+
+借助 [`skills` CLI](https://github.com/vercel-labs/skills) —— 一个支持 70+ 个 agent（Claude Code / Codex / Cursor / Cline / Gemini / Copilot / Windsurf 等）的通用安装器,它会自动判断你装了哪些 agent、按各家规矩装进对应目录。默认装到项目级,全局加 `-g`,跳过确认加 `-y`。
+
+> ⚠️ **装完必做**：进 skill 目录 `cp config.example.yaml config.yaml` 填你的业务——`npx skills add` 只装 `SKILL.md`，不会替你做 config 这步。
+
+---
+
+## 方式一：一键脚本（会顺手帮你做 config）
 
 ```bash
 git clone https://github.com/baozangtuan77/baozangtuan77-content-distiller.git
