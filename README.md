@@ -1,5 +1,7 @@
 # 内容蒸馏 · baozangtuan77-content-distiller
 
+[![install](https://img.shields.io/badge/install-npx_skills_add-black?logo=npm&logoColor=white)](https://github.com/baozangtuan77/baozangtuan77-content-distiller) [![agents](https://img.shields.io/badge/agents-Claude_Code_·_Codex_·_Cursor_·_70%2B-6E56CF)](https://github.com/vercel-labs/skills) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 > 把外部内容（课程 / 播客 / 博主系列 / 视频 / 长文）蒸馏成一份结构化笔记——**并映射到你自己的知识库和真实业务**。
 >
 > A config-driven skill that distills external content into structured notes **mapped to your own knowledge base and business** — not just another summarizer.
